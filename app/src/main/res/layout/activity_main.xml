@@ -57,14 +57,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="132dp"
-        android:layout_height="92dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/fruits" />
 </androidx.constraintlayout.widget.ConstraintLayout>

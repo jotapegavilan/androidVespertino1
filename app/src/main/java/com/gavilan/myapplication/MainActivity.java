@@ -1,16 +1,11 @@
 package com.gavilan.myapplication;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.gavilan.myapplication.model.BaseDatos;
 import com.gavilan.myapplication.model.Usuario;
@@ -20,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnIniciar;
     EditText txtEmail, txtClave;
-    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +23,8 @@ public class MainActivity extends AppCompatActivity {
         btnIniciar = findViewById(R.id.btnIniciar);
         txtEmail = findViewById(R.id.txtEmail);
         txtClave = findViewById(R.id.txtClave);
-        imageView = findViewById(R.id.img);
 
-        imageView.setImageResource(R.drawable.apple);
+
 
         GenerarObjetos();
 
