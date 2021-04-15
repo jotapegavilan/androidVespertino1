@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 
 import com.gavilan.myapplication.model.BaseDatos;
+import com.gavilan.myapplication.model.Recordatorio;
 import com.gavilan.myapplication.model.Usuario;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
@@ -69,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
         BaseDatos.Usuarios.add(u1);
         BaseDatos.Usuarios.add(u2);
         BaseDatos.Usuarios.add(u3);
+
+        Recordatorio r1 = new Recordatorio(1,"Test ingles","test ingles 2",u2);
+        Recordatorio r2 = new Recordatorio(1,"Test","test ingles",u1);
+        Recordatorio r3 = new Recordatorio(1,"hora al doctor","viernes 13:30",u3);
+
+        BaseDatos.Recordatorios.add(r1);
+        BaseDatos.Recordatorios.add(r2);
+        BaseDatos.Recordatorios.add(r3);
     }
 
 }

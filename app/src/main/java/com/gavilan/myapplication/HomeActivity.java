@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.gavilan.myapplication.model.BaseDatos;
+import com.gavilan.myapplication.model.Recordatorio;
 import com.gavilan.myapplication.model.Usuario;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
@@ -19,8 +21,6 @@ public class HomeActivity extends AppCompatActivity {
     TextView txtBienvenida;
     Button btnCrear;
     ListView listRecordatorios;
-
-    ArrayList<String> frutas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +37,9 @@ public class HomeActivity extends AppCompatActivity {
 
         txtBienvenida.setText("Bienvenid@ "+usuario.getNombre()+" "+usuario.getApellido());
 
-        frutas.add("Manzana");
-        frutas.add("Pera");
-        frutas.add("Naranja");
 
-        ArrayAdapter<String> adapter =  new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, frutas);
+        ArrayAdapter<Recordatorio> adapter =  new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, BaseDatos.Recordatorios);
 
         listRecordatorios.setAdapter(adapter);
 
